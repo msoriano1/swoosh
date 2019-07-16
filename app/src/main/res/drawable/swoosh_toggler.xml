@@ -5,6 +5,7 @@ selector has to do with the selection of buttons and which drawable to use given
 -->
 
     <item android:state_checked="true"  android:drawable="@drawable/swoosh_button_checked" />
+    <!-- 'android:state checked' is a boolean that checks if the toggler is selected or not -->
     <item android:state_checked="false" android:drawable="@drawable/swoosh_button" />
 
 </selector>
