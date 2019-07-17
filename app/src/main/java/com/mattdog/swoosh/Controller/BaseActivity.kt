@@ -1,4 +1,4 @@
-package com.mattdog.swoosh
+package com.mattdog.swoosh.Controller
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
