@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
 <!--
-selector has to do with the selection of buttons and which drawable to use given certain states of buttons
+selector has to do with the selection of buttons and which drawable to use, given certain states of buttons or elements
+it can contain the 'logic' for the button layout/design
 -->
 
     <item android:state_checked="true"  android:drawable="@drawable/swoosh_button_checked" />

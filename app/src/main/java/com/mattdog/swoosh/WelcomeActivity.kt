@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_welcome.*
 
-class WelcomeActivity : AppCompatActivity() {
+class WelcomeActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,4 +27,11 @@ class WelcomeActivity : AppCompatActivity() {
         }
 
     }
+    // OnCreate(): basic startup logic, setting variables and onclick listeners. Called only once during its lifetime.
+    // OnStart(): makes the view visible to the user
+    // OnResume(): app is active and running. Keeps running until something takes focus away from the activity.
+    // OnPause(): First state from moving away from the activity. Pauses animation, music, etc. View becomes semitransparent.
+    // OnStop(): When a new activity completely covers the curent activity (e.g. Home button, Take an incoming call, new Activity, etc)
+    // OnRestart(): User navigates back to the current activity
+    // OnDestroy(): Final call that activity receives.
 }
