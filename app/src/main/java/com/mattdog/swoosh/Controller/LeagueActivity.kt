@@ -11,12 +11,27 @@ import kotlinx.android.synthetic.main.activity_league.*
 
 class LeagueActivity : BaseActivity() {
 
-    var selectedLeague = ""
+    //var selectedLeague = ""
     var player = Player("", "")
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        //'outState' is the instance being saved when the device is rotated and the instance is supposedly destroyed
+        super.onSaveInstanceState(outState)
+        outState?.putParcelable(EXTRA_PLAYER, player)
+        //puts the parcelable class to be saved into the outState
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_league)
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle?) {
+        super.onRestoreInstanceState(savedInstanceState)
+        if (savedInstanceState != null){
+            player = savedInstanceState.getParcelable(EXTRA_PLAYER)!!
+        }
+        //if the saved instance state has filled up attributes, assign it to player already
     }
 
     fun leagueNextClicked(view: View){
